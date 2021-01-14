@@ -18,7 +18,7 @@ RUN pip install -r /requirements.txt
 
 # Setting up working directory
 RUN mkdir app
-COPY ./app /app
+COPY . /app
 WORKDIR /app
 
 # Copying scripts folder to docker image
@@ -43,4 +43,4 @@ RUN chmod -R 755 /vol/web
 USER user
 
 # Script to enter application
-CMD ["entrypoint.sh"]
+CMD ['uwsgi', 'app.ini']
