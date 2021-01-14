@@ -37,4 +37,4 @@ RUN adduser -D user
 USER user
 
 # Script to enter application
-CMD ['uwsgi', 'app.ini']
+CMD ["uwsgi", "app.ini"]
