@@ -1,0 +1,21 @@
+version: '3.7'
+
+services: 
+  app:
+    build:
+      context: .
+    container_name: rodcalc
+    restart: always
+    environment: 
+      - APP_NAME=RodCalc
+    expose:
+      - 8080 # uwsgi is listening to :8080 so expose :8080
+    volumes:
+      - ./app:/app # local development autorefresh without building
+  
+  proxy:
+    build: ./proxy
+    container_name: nginx
+    restart: always
+    ports: 
+      - "80:80"
