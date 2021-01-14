@@ -1,1 +1,11 @@
-// @import "partial/variables";
+@import "partial/card";
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background: url("/client/static/img/background.png") no-repeat center center fixed;
+	background-size: cover;
+}
