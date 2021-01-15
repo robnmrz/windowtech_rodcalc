@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1200 Additional Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Zeichnungsbeiblatt | Treibstangenmaße</h2>
+    <h4>Abmessungen für Bauteile "Treibstange" des {{ drive[0] }} - {{ drive[1] }}</h4>
+    <h6></h6>
+    <div class="img-container">
+        <img class="basic_rh" src="file:///app/app/static/img/basic_horizontal.png">
+    </div>
+    <table class="basic-table">
+        <thead>
+            <tr>
+                <th>Kennung</th>
+                <th>Länge [mm]</th>
+                <th>Toleranz [mm]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>{{ measurements[0] }}</td>
+                <td>+/- 0.4</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>{{ measurements[1] }}</td>
+                <td>+/- 0.4</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="img-container">
+        <img class="basic_rv" src="file:///app/app/static/img/basic_vertical.png">
+    </div>
+    <table class="basic-table">
+        <thead>
+            <tr>
+                <th>Kennung</th>
+                <th>Länge [mm]</th>
+                <th>Toleranz [mm]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C</td>
+                <td>{{ measurements[0] }}</td>
+                <td>+/- 0.4</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>{{ measurements[1] }}</td>
+                <td>+/- 0.4</td>
+            </tr>
+            {% if drive[1] == "vertical" %}
+            <tr>
+                <td>E</td>
+                <td>{{ measurements[1] }}</td>
+                <td>+/- 0.4</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>
