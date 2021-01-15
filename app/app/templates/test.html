@@ -8,6 +8,8 @@
 </head>
 <body>
     <h2>Treibstangenberechnung</h2>
+    <h4>Grundkomponenten</h4>
+    <img src="../img/rods/basic_horizontal.png" alt="rod_horizontal">
     <table>
         <tr>
             <th>Abmessung A</th>
@@ -15,7 +17,7 @@
             <th>Abmessung C</th>
             <th>Abmessung D</th>
         </tr>
-        {% for row in rows %}
+        {% for measure in measurements %}
         <tr>
             <td>{{ row[0] }}</td>
             <td>{{ row[1] }}</td>
