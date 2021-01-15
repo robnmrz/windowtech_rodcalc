@@ -3,9 +3,6 @@ FROM python:3.8-alpine
 # Adding image label for maintainer
 LABEL maintainer="r.merz@geze.com"
 
-# Adding /scripts folder to $PATH variable
-ENV PATH="/scripts:${PATH}"
-
 # Copying requirements.txt to docker image
 COPY ./requirements.txt /requirements.txt
 
@@ -33,7 +30,7 @@ WORKDIR /app
 # Creates new user for docker user (less rights than root user)
 RUN adduser -D user
 
-# Switch user
+# Switch to less priviledged user
 USER user
 
 # Script to enter application

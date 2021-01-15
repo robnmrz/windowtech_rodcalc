@@ -2,7 +2,9 @@ Vue.component('input-card', {
     template: `
     <form class="card" v-on:submit.prevent autocomplete="off">
         <div class="desc">
-            <h3 class="primary-text">Calculation of driving rod length</h3>
+            <h3 class="primary-text">
+                F 1200 Document Generator
+            </h3>
             <!-- <h6 class="secondary-text phrase">Plase enter window dimensions:</h6> -->
         </div>
         <div class="form">
@@ -18,7 +20,7 @@ Vue.component('input-card', {
                 >
                 <label class="secondary-text drdo-drive" 
                 for="drives">Select Product*</label>
-                <select class="drop-down" id="drives" v-model="payload.drive" required>
+                <select class="drop-down" id="drives" v-model="payload.product" required>
                 <option v-for="product in products" :value="product">{{ product }}</option>
                 </select>
 
@@ -48,9 +50,9 @@ Vue.component('input-card', {
                 </label>
             </div> -->
         </div>
-        <button class="details" @click="fetchResults">
+        <button class="details" @click="fetchPDF">
             <div class="calculate-text">
-            <h6 class="primary-text">calculate</h6>
+            <h6 class="primary-text">Download PDF</h6>
             </div>
         </button>
     </form>
@@ -61,7 +63,7 @@ Vue.component('input-card', {
             payload: {
               height: null,
               width: null,
-              drive: null,
+              product: null,
               variant: null,
             },
             products: ['F1200', 'F1200+'],
@@ -94,6 +96,41 @@ Vue.component('input-card', {
             })
             .then(response => response.json())
             .then(data => this.$emit('transfer-results', data))
+        },
+        fetchPDF() {
+            // prevents api call if there are missing values
+            for(const key of Object.keys(this.payload)){
+                if ((this.payload[key] === null || this.payload[key] === "")
+                && !['xshift', 'yshift'].includes(key)) {
+                    return
+                }
+            }
+
+            this.payload['xshift'] = this.xshift
+            this.payload['yshift'] = this.yshift
+
+            // call api endpoint
+            const api = "http://localhost/pdfgen"
+            fetch(api, {
+                "method": "POST",
+                "headers": {
+                    'Content-Type': 'application/json',
+                },
+                "body": JSON.stringify(this.payload),
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                var url = window.URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.download = "ouput.pdf";
+                // append element to the dom -> otherwise will not work in firefox
+                document.body.appendChild(a); 
+                a.click();
+                // removing element after completion
+                a.remove();      
+            });
         }
     }
 })
