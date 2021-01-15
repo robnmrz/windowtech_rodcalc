@@ -3,5 +3,8 @@ Flask>=1.1.2,<1.2
 Flask-RESTful==0.3.8
 flask-cors
 
+# pdf generator lib
+WeasyPrint
+
 # uWSGI service package
 uWSGI>=2.0.18,<2.1

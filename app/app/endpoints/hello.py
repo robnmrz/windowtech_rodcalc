@@ -1,5 +1,4 @@
 from flask import request, jsonify
-from app import api
 import json
 
 from flask_restful import Resource
