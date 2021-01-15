@@ -8,30 +8,7 @@
 </head>
 <body>
     <div id="app">
-        <form class="card" v-on:submit.prevent autocomplete="off">
-            <div class="desc">
-               <h6 class="primary-text">Treibstangenberechnung</h6>
-               <h6 class="secondary-text phrase">Plase enter window dimensions:</h6>
-            </div>
-            <div class="form">
-                <div class="input-fields">
-                    <!-- Input fields -->
-                    <label for="height" class="secondary-text">window height [mm]</label>
-                    <input id='height' class="input-num"
-                    type="text" required
-                    >
-                    <label for="width" class="secondary-text">window width [mm]</label>
-                    <input id='width' class="input-num" 
-                    type="text" required
-                    >
-                </div>
-            </div>
-            <button class="details" @click="fetchResults">
-               <div class="calculate-text">
-                <h6 class="primary-text">calculate</h6>
-               </div>
-            </button>
-        </form>
+        <input-card @transfer-results="parseResults"></input-card>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="static/js/main.js"></script>
