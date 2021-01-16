@@ -4,7 +4,6 @@
 [![MIT License][license-shield]][license-url]
 
 <!-- Title Section -->
-<br />
 <p align="left">
   <h1 align="left">Simple PDF Generator for Driving Rod Length</h1>
   <p align="left">
