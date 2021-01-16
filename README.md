@@ -55,7 +55,7 @@
 
 #### Programming Languages
 * [Python](https://www.python.org/)
-* [Javascript](https://developer.mozilla.org/de/docs/Web/JavaScript)
+* [JavaScript](https://developer.mozilla.org/de/docs/Web/JavaScript)
 
 #### Frameworks
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/) (REST-Api)
@@ -68,9 +68,10 @@
 <!-- How to Use Section -->
 ## How To Use
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Examples of how this project can be used. 
+Screenshots, code examples and demos, link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <!-- ROADMAP -->
 ## Project Status
