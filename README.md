@@ -7,7 +7,7 @@
 <p align="left">
   <h1 align="left">Simple PDF Generator for Driving Rod Length</h1>
   <p align="left">
-    An Application that uses form inputs to calculate specific driving rod lengths for tilt-turn window fittings and generating a PDF with the results.
+    An Application that uses form inputs to calculate specific driving rod lengths for tilt-turn window fittings and generates a PDF with the results.
     <br />
     <br />
     <a href="https://github.com/robnmrz/rodcalc"><strong>See documents »</strong></a>
