@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-    container_name: rodcalc
+    container_name: api
     restart: always
     environment: 
       - APP_NAME=RodCalc
@@ -19,3 +19,12 @@ services:
     restart: always
     ports: 
       - "80:80"
+
+  client:
+    build: ./client
+    container_name: frontend
+    volumes:
+      - './client:/client'
+    restart: always
+    ports:
+      - "5500:5500"

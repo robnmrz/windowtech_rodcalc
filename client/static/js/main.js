@@ -86,7 +86,7 @@ Vue.component('input-card', {
             this.payload['yshift'] = this.yshift
 
             // call api endpoint
-            const api = "http://localhost/hello"
+            const api = "http://localhost/api/hello"
             fetch(api, {
                 "method": "POST",
                 "headers": {
@@ -110,7 +110,7 @@ Vue.component('input-card', {
             this.payload['yshift'] = this.yshift
 
             // call api endpoint
-            const api = "http://localhost/pdfgen"
+            const api = "http://localhost/api/pdfgen"
             fetch(api, {
                 "method": "POST",
                 "headers": {

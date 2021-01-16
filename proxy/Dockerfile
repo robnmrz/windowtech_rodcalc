@@ -1,6 +1,8 @@
 # image from nginx to allow to run nginx in 'unprivileged' mode (no root user)
 FROM nginxinc/nginx-unprivileged:1-alpine
 
+LABEL maintainer="r.merz@geze.com"
+
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./uwsgi_params /etc/nginx/uwsgi_params
 
