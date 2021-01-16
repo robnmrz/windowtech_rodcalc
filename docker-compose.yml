@@ -8,6 +8,8 @@ services:
     restart: always
     environment: 
       - APP_NAME=RodCalc
+      - HEADER_NAME=${HEADER_NAME}
+      - SECRET_KEY=${SECRET_KEY}
     expose:
       - 8080 # uwsgi is listening to :8080 so expose :8080
     volumes:

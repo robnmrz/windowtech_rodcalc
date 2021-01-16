@@ -115,6 +115,7 @@ Vue.component('input-card', {
                 "method": "POST",
                 "headers": {
                     'Content-Type': 'application/json',
+                    'X-API-KEY': '64jczk80AdORfm8tgnqF7IyoNqGgzAI3'
                 },
                 "body": JSON.stringify(this.payload),
             })
