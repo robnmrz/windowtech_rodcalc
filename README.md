@@ -7,8 +7,7 @@
 <p align="left">
   <h1 align="left">Simple PDF Generator for Driving Rod Length</h1>
   <p align="left">
-    Small application with a simple web interface to calculate specific driving rod lengths for tilt-turn windows 
-    and generating an output.pdf where the specific measurements  are displayed
+    An Application that uses form inputs to calculate specific driving rod lengths for tilt-turn window fittings and generating a PDF with the results.
     <br />
     <br />
     <a href="https://github.com/robnmrz/rodcalc"><strong>See documents »</strong></a>
@@ -47,9 +46,7 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
-`#todo: write "About Project Section"`
-
+Small application consisting of a Flask backend api service to generate dynamic PDF files and a simple web interface using Vue.js. It uses form input parameter to calculate specific driving rod lengths for tilt-turn window fittings and returns a PDF file with simple darwings and the corresponding measurements. Front end and back end are individually containerized using docker and docker-compose to manage the services. Static files are served via a proxy with nginx as load balancer.
 
 ## Used Technologies
 
