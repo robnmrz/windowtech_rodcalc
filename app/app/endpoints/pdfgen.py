@@ -1,11 +1,13 @@
 from flask import request, make_response, render_template
 import json
 from flask_restful import Resource
+from app.auth import require_api_key_auth
 
 from weasyprint import HTML, CSS
 from weasyprint.fonts import FontConfiguration
 
 class PdfGenerator(Resource):
+    @require_api_key_auth
     def post(self):
         data = json.loads(request.data)
 
