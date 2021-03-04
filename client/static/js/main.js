@@ -105,12 +105,11 @@ Vue.component('input-card', {
                     return
                 }
             }
-
             this.payload['xshift'] = this.xshift
             this.payload['yshift'] = this.yshift
 
             // call api endpoint
-            const api = "http://localhost/api/pdfgen"
+            const api = "http://ec2-18-212-244-9.compute-1.amazonaws.com:8000/api/pdfgen"
             fetch(api, {
                 "method": "POST",
                 "headers": {

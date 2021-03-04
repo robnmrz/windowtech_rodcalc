@@ -20,11 +20,13 @@ services:
     container_name: nginx
     restart: always
     ports: 
-      - "80:80"
+      - "8000:8000"
 
   client:
     build: ./client
     container_name: frontend
+    environment:
+      - VUE_APP_SECRET_KEY=${VUE_APP_SECRET_KEY}
     volumes:
       - './client:/client'
     restart: always
