@@ -98,13 +98,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Project Link: [https://github.com/robnmrz/rodcalc](https://github.com/robnmrz/rodcalc)
 
-<!-- Acknowledgement -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
 <!-- Markdown links and shields -->
 [forks-shield]: https://img.shields.io/github/forks/robnmrz/rodcalc?label=Forks&style=flat-square
 [forks-url]: https://github.com/robnmrz/repo/network/members
